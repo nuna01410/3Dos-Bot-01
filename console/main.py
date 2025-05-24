@@ -89,7 +89,6 @@ class Console:
         accounts_table.add_row("Accounts to farm", str(len(config.accounts_to_farm)))
         accounts_table.add_row("Accounts to login", str(len(config.accounts_to_login)))
         accounts_table.add_row("Accounts to export stats", str(len(config.accounts_to_export_stats)))
-        accounts_table.add_row("Account to complete tasks", str(len(config.accounts_to_complete_tasks)))
         accounts_table.add_row("Referral codes", str(len(config.referral_codes)))
         accounts_table.add_row("Proxies", str(len(config.proxies)))
 
