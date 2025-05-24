@@ -1,0 +1,64 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#                           APPLICATION CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+application_settings:
+  threads: 10
+  farm_delay: 180 # minutes
+  database_url: "sqlite://database/database.sqlite3" # SQlite or postgres, e.g. sqlite://database.db or postgres://user:password@localhost/dbname
+  skip_logged_accounts: true # If you need to relogin accounts that are already logged in, set this to false
+  shuffle_accounts: true
+  check_uniqueness_of_proxies: true
+  gen_random_pass_for_accounts: true
+  use_ref_codes_from_database: false # If true, it will use random referral codes from the database, otherwise it will take random codes from the file `referral_codes.txt`
+
+
+attempts_and_delay_settings:
+  delay_before_start:
+    min: 30 # seconds
+    max: 60 # seconds
+
+  error_delay: 2 # seconds
+  max_register_attempts: 3
+  max_login_attempts: 5
+  max_reverify_attempts: 3
+  max_stats_attempts: 3
+  max_captcha_attempts: 10
+  max_farm_attempts: 3
+
+
+captcha_settings:
+  max_captcha_solving_time: 120 # seconds
+  solvium_api_key: "" # Solvium API key - @solvium_crypto_bot
+  proxy: "" # If API is unavailable due to your server GEO, insert proxy, format: "http://user:password@proxyserver:port"
+
+
+redirect_settings:
+  enabled: false
+  email: ""
+  password: ""
+  imap_server: ""
+  use_proxy: false
+
+
+imap_settings:
+  use_proxy_for_imap: false
+
+  use_single_imap:
+    enable: false
+    imap_server: "imap.gmail.com"
+
+  servers:
+    gmail.com: imap.gmail.com
+    yahoo.com: imap.mail.yahoo.com
+    icloud.com: imap.mail.me.com
+    mail.ru: imap.mail.ru
+    gmx.com: imap.gmx.com
+    gmx.net: imap.gmx.net
+    gmx.de: imap.gmx.net
+    onet.pl: imap.poczta.onet.pl
+    onet.com.pl: imap.poczta.onet.pl
+    op.pl: imap.poczta.onet.pl
+    onet.eu: imap.poczta.onet.pl
+    gazeta.pl: imap.gazeta.pl
