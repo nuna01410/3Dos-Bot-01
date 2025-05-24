@@ -55,7 +55,7 @@ class Accounts(Model):
 
     @classmethod
     async def get_random_invite_code(cls) -> str | None:
-        accounts_with_code = await cls.filter(~Q(invite_code=None)).values_list("invite_code", flat=True)
+        accounts_with_code = await cls.filter(~Q(referral_code=None)).values_list("referral_code", flat=True)
         if not accounts_with_code:
             return None
         return random.choice(accounts_with_code)
