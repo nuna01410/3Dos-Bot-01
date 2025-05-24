@@ -247,7 +247,7 @@ class Bot:
 
                 if last_completed_action is None:
                     if not await self._is_email_valid(proxy):
-                        return operation_failed(db_account_value.email, db_account_value.email_password, db_account_value.account_password)
+                        return operation_failed(email=self.account_data.email, email_password=self.account_data.password)
 
                     last_completed_action = "email_validation"
 
