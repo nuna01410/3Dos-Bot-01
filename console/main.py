@@ -33,6 +33,7 @@ class Console:
         "🔑 Login accounts": "login",
         "🌾 Farm accounts": "farm",
         "📊 Export accounts statistics": "export_stats",
+        "🧹 Clean accounts proxies": "clean_accounts_proxies",
         "❌ Exit": "exit",
     }
 
